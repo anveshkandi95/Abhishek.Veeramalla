@@ -5,8 +5,8 @@
     {
       "Sid": "AllowOwnerOnlyAccess",
       "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:*",
+      "Principal": "*", #for whom this policy is created.
+      "Action": "s3:*", #for which action this policy is writing. eg: download/upload/read/write/etc
       "Resource": [
         "arn:aws:s3:::your-bucket-name/*",
         "arn:aws:s3:::your-bucket-name"
